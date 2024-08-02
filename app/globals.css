@@ -377,6 +377,6 @@
   }
 
   .sidebar-label {
-    @apply text-16 font-semibold text-black-2 max-xl:hidden;
+    @apply text-16 font-semibold text-black-2 max-xl:hidden text-nowrap;
   }
 }
