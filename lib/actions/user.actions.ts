@@ -10,7 +10,7 @@ export const signIn = async (userData: signInProps) => {
 
 export const signUp = async (userData: SignUpParams) => {
   try {
-    // Mutation / Database / Make fetch
+    // create a user account
   } catch (error) {
     console.error("Error => ", error);
   }
