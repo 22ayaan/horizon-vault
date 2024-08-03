@@ -15,11 +15,11 @@ const Sidebar = ({ user }: SidebarProps) => {
       <nav className="flex flex-col gap-4">
         <Link href="/" className="mb-12 cursor-pointer items-center gap-2">
           <Image
-            src="/icons/logo.svg"
+            src="/images/logo-no-bg.png"
             width={34}
             height={34}
             alt="logo"
-            className="size-[24px] max-xl:size-14"
+            className="size-16 max-xl:size-20"
           />
           <h1 className="sidebar-logo">Horizon Vault</h1>
         </Link>
