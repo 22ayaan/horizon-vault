@@ -32,8 +32,8 @@ const MobileNav = ({ user }: MobileNavProps) => {
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-white shadow-slate-400">
-          <Link href="/" className="cursor-pointer items-center gap-1 px-4">
-            <Image src="/icons/logo.svg" width={34} height={34} alt="logo" />
+          <Link href="/" className="cursor-pointer flex items-center gap-1 px-4">
+            <Image src="/images/logo-no-bg.png" width={34} height={34} alt="logo" />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
               Horizon Vault
             </h1>
