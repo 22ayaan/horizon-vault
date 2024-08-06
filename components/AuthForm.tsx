@@ -103,7 +103,7 @@ const AuthForm = ({ type }: { type: string }) => {
           <PlaidLink user={user} variant="primary" />
         </div>
       ) : (
-        <>
+        <section>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               {type === "sign-up" && (
@@ -215,7 +215,7 @@ const AuthForm = ({ type }: { type: string }) => {
               {type === "sign-in" ? "Sign Up" : "Sign In"}
             </Link>
           </footer>
-        </>
+        </section>
       )}
     </section>
   );
