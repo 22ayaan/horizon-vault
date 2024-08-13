@@ -135,3 +135,19 @@ export const transactionCategoryStyles = {
     chipBackgroundColor: "bg-inherit",
   },
 };
+
+export const doughnutChartColors = [
+  "#0747b6",
+  "#2265d8",
+  "#2f91fa",
+  "#4dc7ff",
+  "#7ee7ff",
+  "#b0f0ff",
+  "#d6f8ff",
+  "#f3fcff",
+  "#00a6ed",
+  "#34c3eb",
+  "#58d6f9",
+  "#79e6fc",
+  "#9ce6fd",
+];
