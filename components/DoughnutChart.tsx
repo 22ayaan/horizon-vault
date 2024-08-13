@@ -19,7 +19,7 @@ const DoughnutChart = ({ accounts }: DoughnutChartProps) => {
         backgroundColor: doughnutChartColors.slice(0, balances.length),
       },
     ],
-    labels: ["Bank 1", "Bank 2", "Bank 3"],
+    labels: accountNames,
   };
   return (
     <Doughnut
