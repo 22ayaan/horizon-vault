@@ -32,7 +32,7 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
             type="greeting"
             title="Welcome"
             user={loggedIn?.firstName || "Guest"}
-            subtext="Access and manage your accounts and transactions efficiently."
+            subtext="Access and manage your accounts and transactions efficiently"
           />
           <TotalBalanceBox
             accounts={accountsData}

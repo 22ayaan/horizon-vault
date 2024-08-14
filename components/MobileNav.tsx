@@ -54,6 +54,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                         className={cn("mobilenav-sheet_close w-full", {
                           "bg-bank-gradient": isActive,
                         })}
+                        prefetch={true}
                       >
                         <Image
                           src={link.imgURL}

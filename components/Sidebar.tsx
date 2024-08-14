@@ -35,6 +35,7 @@ const Sidebar = ({ user }: SidebarProps) => {
               href={link.route}
               key={link.label}
               className={cn("sidebar-link", { "bg-bank-gradient": isActive })}
+              prefetch={true}
             >
               <div className="relative size-6">
                 <Image
@@ -57,7 +58,9 @@ const Sidebar = ({ user }: SidebarProps) => {
           );
         })}
 
-        <PlaidLink user={user} />
+        <div className="hover:bg-gray-200 py-1 rounded-lg">
+          <PlaidLink user={user} />
+        </div>
       </nav>
       <Footer user={user} type="desktop" />
     </section>
