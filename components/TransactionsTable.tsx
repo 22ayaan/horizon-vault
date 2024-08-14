@@ -33,7 +33,7 @@ const CategoryBadge = ({ category }: CategoryBadgeProps) => {
 const TransactionsTable = ({ transactions }: TransactionTableProps) => {
   console.log(transactions);
   return (
-    <Table>
+    <Table className="z-0 overflow-x-scroll">
       <TableHeader className="bg-[#f9fafb]">
         <TableRow>
           <TableHead className="p-x-2">Transaction</TableHead>
