@@ -242,6 +242,7 @@ declare interface CategoryBadgeProps {
 
 declare interface TransactionTableProps {
   transactions: Transaction[];
+  limit?: number;
 }
 
 declare interface CategoryProps {

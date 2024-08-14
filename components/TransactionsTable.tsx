@@ -30,7 +30,10 @@ const CategoryBadge = ({ category }: CategoryBadgeProps) => {
   );
 };
 
-const TransactionsTable = ({ transactions }: TransactionTableProps) => {
+const TransactionsTable = ({ transactions, limit = 0 }: TransactionTableProps) => {
+  if (limit === 0) {
+    limit = transactions.length;
+  }
   // console.log(transactions);
   return (
     <Table className="z-0 overflow-x-scroll">
@@ -45,7 +48,7 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {transactions.map((transaction: Transaction) => {
+        {transactions.slice(0, limit).map((transaction: Transaction) => {
           const status = getTransactionStatus(new Date(transaction.date));
           const amount = formatAmount(transaction.amount);
 
@@ -83,7 +86,7 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
                 {formatDateTime(new Date(transaction.date)).dateTime}
               </TableCell>
 
-              <TableCell className="pl-2 pr-10 capitalize min-w-24">
+              <TableCell className="pl-2 pr-10 capitalize min-w-24 max-md:hidden">
                 {transaction.paymentChannel}
               </TableCell>
 

@@ -1,7 +1,3 @@
-// "use client";
-import Spinner from "@/components/ui/spinner";
-import { Progress } from "@/components/ui/progress";
-
 export default function Loading() {
   return (
     <div className="flex flex-row min-h-screen justify-center items-center bg-gray-200">

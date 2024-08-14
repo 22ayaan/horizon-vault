@@ -49,7 +49,7 @@ const RecentTransactions = ({
               type="full"
             />
 
-            <TransactionsTable transactions={transactions} />
+            <TransactionsTable transactions={transactions} limit={20} />
           </TabsContent>
         ))}
       </Tabs>
