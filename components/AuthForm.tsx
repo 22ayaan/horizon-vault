@@ -8,27 +8,19 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Form } from "@/components/ui/form";
 import CustomInput from "./CustomInput";
 import { authFormSchema } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { getLoggedInUser, signIn, signUp } from "@/lib/actions/user.actions";
+import { signIn, signUp } from "@/lib/actions/user.actions";
 import PlaidLink from "./PlaidLink";
 
 const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState({ status: false, message: "" });
 
   const formSchema = authFormSchema(type);
 
@@ -63,6 +55,8 @@ const AuthForm = ({ type }: { type: string }) => {
         };
 
         const newUser = await signUp(userData);
+        if (!newUser)
+          throw new Error(`Sign up failed! Ensure all fields are filled correctly.`);
 
         setUser(newUser);
       }
@@ -74,11 +68,29 @@ const AuthForm = ({ type }: { type: string }) => {
         });
 
         if (response) router.push("/");
+        else
+          setError({
+            status: true,
+            message: "Login Failed! Email or password incorrect",
+          });
       }
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
+      setError({
+        status: true,
+        message: error.message,
+      });
     } finally {
       setIsLoading(false);
+      if (error)
+        setTimeout(
+          () =>
+            setError({
+              status: false,
+              message: "",
+            }),
+          5000
+        );
     }
   };
 
@@ -86,9 +98,14 @@ const AuthForm = ({ type }: { type: string }) => {
     <section className="auth-form">
       <header className="flex flex-col gap-5 md:gap-8">
         <Link href="/" className="cursor-pointer flex items-center gap-1">
-          <Image src="/icons/logo.svg" width={34} height={34} alt="Horizon logo" />
-          <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-            Horizon
+          <Image
+            src="/images/logo-no-bg.png"
+            width={64}
+            height={64}
+            alt="Horizon logo"
+          />
+          <h1 className="text-26 font-montserrat tracking-widest font-bold text-black-1">
+            Horizon Vault
           </h1>
         </Link>
 
@@ -183,6 +200,14 @@ const AuthForm = ({ type }: { type: string }) => {
                 label="Password"
                 placeholder="Enter your password"
               />
+
+              {error.status && (
+                <div className="bg-slate-100 border-none rounded-lg p-4">
+                  <p className="text-red-500 text-sm font-semibold">
+                    {error.message}
+                  </p>
+                </div>
+              )}
 
               <div className="flex flex-col gap-4">
                 <Button type="submit" disabled={isLoading} className="form-btn">

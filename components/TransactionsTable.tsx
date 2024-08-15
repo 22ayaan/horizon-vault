@@ -36,15 +36,17 @@ const TransactionsTable = ({ transactions, limit = 0 }: TransactionTableProps) =
   }
   // console.log(transactions);
   return (
-    <Table className="z-0 overflow-x-scroll">
-      <TableHeader className="bg-[#f9fafb]">
-        <TableRow>
-          <TableHead className="p-x-2">Transaction</TableHead>
-          <TableHead className="p-x-2">Amount</TableHead>
-          <TableHead className="p-x-2">Status</TableHead>
-          <TableHead className="p-x-2">Date</TableHead>
-          <TableHead className="p-x-2 max-md:hidden">Channel</TableHead>
-          <TableHead className="p-x-2 max-md:hidden">Category</TableHead>
+    <Table className="z-0 overflow-x-scroll border-blue-800 border-[0.5px]">
+      <TableHeader className="bg-blue-800">
+        <TableRow className="text-white">
+          <TableHead className="px-2 font-semibold">Transaction</TableHead>
+          <TableHead className="px-2 font-semibold">Amount</TableHead>
+          <TableHead className="px-2 font-semibold">Status</TableHead>
+          <TableHead className="px-2 font-semibold">Date</TableHead>
+          <TableHead className="px-2 font-semibold max-md:hidden">Channel</TableHead>
+          <TableHead className="px-2 font-semibold max-md:hidden">
+            Category
+          </TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>

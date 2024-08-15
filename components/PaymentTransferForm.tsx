@@ -25,6 +25,7 @@ import {
 } from "./ui/form";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import Link from "next/link";
 
 const formSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -194,9 +195,18 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
           render={({ field }) => (
             <FormItem className="border-t border-gray-200">
               <div className="payment-transfer_form-item pb-5 pt-6">
-                <FormLabel className="text-14 w-full max-w-[280px] font-medium text-gray-700">
-                  Receiver&apos;s Plaid Sharable Id
-                </FormLabel>
+                <div className="payment-transfer_form-content">
+                  <FormLabel className="text-14 font-medium text-gray-700">
+                    Recipient&apos;s Plaid Sharable Id
+                  </FormLabel>
+                  <FormDescription className="text-12 font-normal text-gray-600">
+                    Can be accessed from the{" "}
+                    <Link href="/my-banks" className="text-blue-800 underline">
+                      My Banks
+                    </Link>{" "}
+                    page
+                  </FormDescription>
+                </div>
                 <div className="flex w-full flex-col">
                   <FormControl>
                     <Input

@@ -138,7 +138,7 @@
   }
 
   .view-all-btn {
-    @apply text-14 rounded-lg border border-gray-300 px-4 py-2.5 font-semibold text-blue-600;
+    @apply text-14 rounded-lg border border-blue-800 px-4 py-2.5 font-semibold text-blue-800;
   }
 
   .recent-transactions {
@@ -239,7 +239,7 @@
 
   /* Bank Info */
   .bank-info {
-    @apply gap-[18px] flex p-4 transition-all border bg-blue-25 border-transparent;
+    @apply gap-[18px] flex p-4 transition-all border bg-blue-800 border-transparent rounded-lg;
   }
 
   /* Category Badge */
@@ -275,7 +275,7 @@
 
   /* Auth */
   .auth-asset {
-    @apply flex h-screen w-full sticky top-0 items-center justify-end bg-slate-300 max-lg:hidden;
+    @apply flex h-screen w-full sticky top-0 items-center justify-end bg-blue-800 max-lg:hidden;
   }
 
   /* Auth Form */
@@ -296,11 +296,11 @@
   }
 
   .form-btn {
-    @apply text-16 rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form;
+    @apply text-16 rounded-lg border border-blue-800 bg-blue-800 font-semibold text-white shadow-form;
   }
 
   .form-link {
-    @apply text-14 cursor-pointer font-medium text-bankGradient;
+    @apply text-14 cursor-pointer font-medium text-blue-800 underline;
   }
 
   /* Payment Transfer */
@@ -309,7 +309,7 @@
   }
 
   .payment-transfer_form-item {
-    @apply flex w-full max-w-[850px] flex-col gap-3 md:flex-row lg:gap-8;
+    @apply flex w-full max-w-[850px] flex-col gap-3 md:flex-row lg:gap-8 items-center;
   }
 
   .payment-transfer_form-content {
