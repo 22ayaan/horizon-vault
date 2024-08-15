@@ -4,7 +4,14 @@ import TransactionsTable from "@/components/TransactionsTable";
 import { getAccount, getAccounts } from "@/lib/actions/bank.actions";
 import { getLoggedInUser } from "@/lib/actions/user.actions";
 import { formatAmount } from "@/lib/utils";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Transaction History | Horizon Vault",
+  description:
+    "The history of all transactions related to your connected bank accounts.",
+};
 
 const TransactionHistory = async ({
   searchParams: { id, page },
