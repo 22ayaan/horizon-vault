@@ -117,6 +117,31 @@ const AuthForm = ({ type }: { type: string }) => {
                 ? "Link your account to get started"
                 : "Please enter your details"}
             </p>
+            {user && (
+              <p className="text-16 font-normal text-gray-600 my-3 bg-gray-100 p-4 rounded-lg">
+                Horizon Vault uses{" "}
+                <Link
+                  href="https://plaid.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="text-blue-800 underline"
+                >
+                  Plaid
+                </Link>{" "}
+                to connect with your bank securely. Currently Plaid is set to Sandbox
+                Mode where real bank data is not used. For instructions on how to
+                connect a sandbox bank account, please refer to this{" "}
+                <Link
+                  href="https://github.com/22ayaan/horizon-vault/blob/main/README.md"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="text-blue-800 underline"
+                >
+                  repo
+                </Link>
+                .
+              </p>
+            )}
           </h1>
         </div>
       </header>
