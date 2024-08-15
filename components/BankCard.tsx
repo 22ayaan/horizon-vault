@@ -17,7 +17,7 @@ const BankCard = ({ account, userName, showBalance = false }: CreditCardProps) =
               {userName}
             </h1>
             <p className="font-montserrat font-semibold tracking-[1px] text-white">
-              {showBalance && formatAmount(account.currentBalance)}
+              {formatAmount(account.currentBalance)}
             </p>
           </div>
 
@@ -44,7 +44,9 @@ const BankCard = ({ account, userName, showBalance = false }: CreditCardProps) =
         </div>
       </Link>
 
-      {showBalance && <Copy title="Copy Shareable ID ➡️" />}
+      {showBalance && (
+        <Copy title="Copy Shareable ID ➡️" text={account?.shareableId} />
+      )}
     </div>
   );
 };
