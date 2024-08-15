@@ -14,7 +14,7 @@ const DoughnutChart = ({ accounts }: DoughnutChartProps) => {
   const data = {
     datasets: [
       {
-        label: "Banks",
+        label: "Balance",
         data: balances,
         backgroundColor: doughnutChartColors.slice(0, balances.length),
       },

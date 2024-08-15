@@ -4,6 +4,7 @@ import React from "react";
 import BankCard from "./BankCard";
 import { countTransactionCategories } from "@/lib/utils";
 import Category from "./Category";
+import PlaidLink from "./PlaidLink";
 
 const RightSideBar = ({ user, transactions, banks }: RightSidebarProps) => {
   const categories: CategoryCount[] = countTransactionCategories(transactions);
@@ -14,7 +15,7 @@ const RightSideBar = ({ user, transactions, banks }: RightSidebarProps) => {
         <div className="profile-banner" />
         <div className="profile">
           <div className="profile-img">
-            <span className="text-5xl text-blue-950">{user?.firstName[0]}</span>
+            <span className="text-5xl text-blue-950">{`${user?.firstName[0]}${user?.lastName[0]}`}</span>
           </div>
           <div className="profile-details">
             <h1 className="profile-name">{`${user?.firstName} ${user?.lastName}`}</h1>
@@ -24,11 +25,15 @@ const RightSideBar = ({ user, transactions, banks }: RightSidebarProps) => {
       </section>
       <section className="banks">
         <div className="flex w-full justify-between">
-          <h2 className="header-2">My Banks</h2>
-          <Link href="/" className="flex gap-2">
+          <Link href="/my-banks">
+            <h2 className="header-2 !text-blue-700">My Banks</h2>
+          </Link>
+
+          {/* <Link href="/" className="flex gap-2">
             <Image src="/icons/plus.svg" alt="plus" width={20} height={20} />
             <h2 className="text-14 font-semibold text-blue-600">Add Bank</h2>
-          </Link>
+          </Link> */}
+          {/* <PlaidLink user={user} /> */}
         </div>
         {banks?.length > 0 && (
           <div className="relative flex flex-1 flex-col items-center justify-center gap-5">

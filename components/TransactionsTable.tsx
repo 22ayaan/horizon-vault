@@ -59,7 +59,7 @@ const TransactionsTable = ({ transactions, limit = 0 }: TransactionTableProps) =
             <TableRow
               key={transaction.id}
               className={`${
-                isDebit || amount[0] === "-" ? "bg-[#fffbfa]" : "bg-[#f6fef9]"
+                isDebit || amount[0] === "-" ? "bg-red-100/20" : "bg-green-100/20"
               } !over:bg-none !border-b-DEFAULT`}
             >
               <TableCell className="max-w-[250px] pl-2 pr-10">

@@ -159,7 +159,7 @@
   }
 
   .profile-banner {
-    @apply h-[120px] w-full bg-gradient-mesh bg-cover bg-no-repeat;
+    @apply h-[120px] w-full bg-gradient-mesh bg-cover bg-right bg-no-repeat;
   }
 
   .profile {
@@ -201,7 +201,7 @@
   }
 
   .transactions-account {
-    @apply flex flex-col justify-between gap-4 rounded-lg border-y bg-blue-600 px-4 py-5 md:flex-row;
+    @apply flex flex-col justify-between gap-4 rounded-lg border-y bg-blue-800 px-4 py-5 md:flex-row;
   }
 
   .transactions-account-balance {
@@ -217,7 +217,7 @@
   }
 
   .header-box-subtext {
-    @apply text-14 lg:text-16 font-normal text-gray-600;
+    @apply text-14 lg:text-16 font-normal text-blue-800;
   }
 
   /* Bank Card */
@@ -325,7 +325,7 @@
   }
 
   .payment-transfer_btn {
-    @apply text-14 w-full bg-bank-gradient font-semibold text-white shadow-form !important;
+    @apply text-14 w-full bg-blue-800 font-semibold text-white shadow-form !important;
   }
 
   /* Root Layout */
@@ -377,7 +377,7 @@
   }
 
   .sidebar-link {
-    @apply flex gap-3 items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start hover:bg-gray-200;
+    @apply flex gap-3 items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start hover:bg-gray-200 hover:text-black-2;
   }
 
   .sidebar-label {

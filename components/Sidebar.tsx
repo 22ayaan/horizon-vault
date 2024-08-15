@@ -34,7 +34,9 @@ const Sidebar = ({ user }: SidebarProps) => {
             <Link
               href={link.route}
               key={link.label}
-              className={cn("sidebar-link", { "bg-bank-gradient": isActive })}
+              className={cn("sidebar-link", {
+                "bg-blue-800 hover:bg-blue-700": isActive,
+              })}
               prefetch={true}
             >
               <div className="relative size-6">
