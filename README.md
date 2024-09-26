@@ -139,3 +139,36 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 ## <a name="snippets">📸 Snippets</a>
 
 ## <a name="instructions">🧑‍🏫 Instructions to connect bank account in Plaid Sandbox</a>
+
+1. Press the "Continue" button to begin connecting a Plaid Sandbox Account.
+<img width="1440" alt="Screenshot 2024-09-26 at 5 07 56 PM" src="https://github.com/user-attachments/assets/d313ef99-8c69-4fa5-be17-faf8c97b68e5">
+
+2. You will be greeted with a secure Plaid pop-up like so. Click "Continue" to proceed:
+<img width="1440" alt="Screenshot 2024-09-26 at 5 08 12 PM" src="https://github.com/user-attachments/assets/c1f4c89b-3118-4b81-bd66-8a333c9e2eff">
+
+3. You will get the option to choose from different banks to connect with (it doesn't matter which one you pick as they are all test versions):
+<img width="1440" alt="Screenshot 2024-09-26 at 5 08 24 PM" src="https://github.com/user-attachments/assets/1959887f-4ee9-4cb4-a543-892c4c59c023">
+
+4. The option I picked is Chase Bank and I was greeted with the following screen. Click "Continue to log in":
+<img width="1440" alt="Screenshot 2024-09-26 at 5 08 32 PM" src="https://github.com/user-attachments/assets/49bd93d4-9555-4288-a03d-e8c1443ff01b">
+
+5. You will be redirected to a new full screen window operated by Plaid sanbox under the name "First Platypus Bank". **To sign in enter username: `user_good` and password: `pass_good`**. Then click "Sign in".
+<img width="1440" alt="Screenshot 2024-09-26 at 5 08 40 PM" src="https://github.com/user-attachments/assets/605cffd2-bc4f-4210-84ce-776e9d778486">
+
+6. The default option is "Mobile". Just click "Get code":
+<img width="1440" alt="Screenshot 2024-09-26 at 5 10 03 PM" src="https://github.com/user-attachments/assets/59e1a0af-a444-45ba-a2cb-fda6308f51eb">
+
+7. The Code field can be left blank. Just click "Submit":
+<img width="1440" alt="Screenshot 2024-09-26 at 5 10 37 PM" src="https://github.com/user-attachments/assets/2d309343-4c29-446d-ab1d-57aa36381152">
+
+8. In the next screen choose either `Plaid Checking` or `Plaid Savings`:
+<img width="1440" alt="Screenshot 2024-09-26 at 5 10 49 PM" src="https://github.com/user-attachments/assets/f977373d-6e15-442f-b2a8-b7df6f6513ca">
+
+9. Scroll down and check both consent boxes and click `Continue`:
+<img width="1440" alt="Screenshot 2024-09-26 at 5 10 59 PM" src="https://github.com/user-attachments/assets/8a6fbf3f-9f1f-42d6-90ae-c22b37539e4f">
+
+10. Agree to the Terms and Conditions and click `Connect account information`:
+<img width="1440" alt="Screenshot 2024-09-26 at 5 11 04 PM" src="https://github.com/user-attachments/assets/36289067-0c5b-4a73-99b2-b614100639fa">
+
+12. Once thats complete, you should be greeted with this Success screen. Click `Continue` and you will be redirected to your dashboard with all your account data loaded:
+<img width="1440" alt="Screenshot 2024-09-26 at 5 11 19 PM" src="https://github.com/user-attachments/assets/946daef3-6517-4599-822c-6270aed53800">
