@@ -34,6 +34,8 @@ If you are here for instructions on how to connect your bank account to the webs
 
 Horizon Vault is a financial management platform built with Next.js that seamlessly integrates with multiple bank accounts, offering real-time transaction tracking, effortless money transfers between users, and robust financial management tools to streamline your finances.
 
+Checkout Horizon Vault [here](https://horizonvault.vercel.app).
+
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Next.js
