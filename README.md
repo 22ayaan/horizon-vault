@@ -21,7 +21,7 @@
 
 ## 📋 <a name="table">Table of Contents</a>
 
-If you are here for instructions on how to connect your bank account to the website, skip to this section.
+If you are here for instructions on how to connect your bank account to the website, skip to [this](#instructions) section.
 
 1. 👋 [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
